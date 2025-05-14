@@ -1,0 +1,70 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header{
+    overflow-x: hidden;
+}
+
+.hero-picture{
+    width: 100vw;
+    height: 100vh;
+}
+
+.black{
+    position: absolute;
+    width: 99vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.navbar{
+    position: absolute;
+    top: 25px;
+    width: 99vw;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.logo{
+    color: rgb(229, 9, 20);
+    fill: currentColor;
+    height: 40px;
+    width: 148px;
+    padding-right: 700px;
+}
+
+.button{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 15vw;
+}
+
+.language{
+    height: 32px;
+    width: 100px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: 0.7px solid rgba(255,255,255,0.5);
+    border-radius: 2px;
+}
+
+.sign-in{
+    height: 30px;
+    width: 70px;
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 4px;
+    font-weight: 700;
+}
