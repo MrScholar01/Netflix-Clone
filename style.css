@@ -16,6 +16,7 @@ body {
     background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/7968847f-3da9-44b3-8bbb-13a46579881f/web/IN-en-20250609-TRIFECTA-perspective_32b70b51-20d4-46db-8a1a-3d5428be5f0e_large.jpg');
     background-size: cover;
     background-position: top -10px center;
+    background-repeat: no-repeat;
     position: absolute;
 }
 
@@ -139,9 +140,7 @@ body {
     box-sizing: border-box;
 }
 
-
-.email-wrap::after {
-    content: "Email address";
+.label{
     height: 30px;
     width: 110px;
     color: rgba(255, 255, 255, 0.603);
@@ -149,13 +148,14 @@ body {
     position: absolute;
     top: 14px;
     left: 14px;
+    cursor: text;
 }
 
-.email-wrap:focus-within::after {
+.email:focus + label {
     animation: after-element-in 0.1s linear forwards;
 }
 
-.email-wrap:not(:focus-within)::after {
+.email:not(:focus) + label{
     animation: after-element-out 0.1s linear forwards;
 } 
 
@@ -307,7 +307,7 @@ body {
         margin: auto;
     }
 
-    .email-wrap::after {
+    .label {
         top: 10px;
     }
 
