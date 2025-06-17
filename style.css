@@ -1,27 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 }
 
-body{
+body {
     overflow-x: hidden;
-    /* background-color: black; */
+    background-color: black;
 }
 
-header{
+.heropic {
     width: 100%;
     height: 100vh;
     background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/7968847f-3da9-44b3-8bbb-13a46579881f/web/IN-en-20250609-TRIFECTA-perspective_32b70b51-20d4-46db-8a1a-3d5428be5f0e_large.jpg');
     background-size: cover;
-    background-position: center center;
+    background-position: top -10px center;
+    position: absolute;
 }
 
-.black{
-    width: 100vw;
+.black {
+    width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.755);
     position: relative;
     z-index: 1;
     display: flex;
@@ -29,7 +30,7 @@ header{
     align-items: center;
 }
 
-.nav{
+.nav {
     display: flex;
     width: 81vw;
     justify-content: space-between;
@@ -38,21 +39,24 @@ header{
     height: 6vh;
 }
 
-.logo{
+.logo {
     fill: red;
     width: 150px;
+    margin-left: 20px;
 }
 
-.button{
+.button {
     display: flex;
     margin-bottom: 5px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
-.button > :nth-child(1){
+.button> :nth-child(1) {
     width: 124px;
     height: 32px;
     background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.532);
+    border: 1px solid rgba(255, 255, 255, 0.381);
     border-radius: 5px;
     color: white;
     margin-right: 13px;
@@ -63,7 +67,12 @@ header{
     align-items: center;
 }
 
-.button > :nth-child(2){
+.eng {
+    display: inline-block;
+    padding-bottom: 0px;
+}
+
+.button> :nth-child(2) {
     background-color: red;
     color: white;
     width: 76px;
@@ -76,26 +85,234 @@ header{
     padding-bottom: 4px;
 }
 
-.main{
+
+.main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     height: 94vh;
-    width: 39vw;
+    width: 594px;
+    margin: auto;
+    flex-wrap: wrap;
 }
 
-.main > :nth-child(1){
+.main> :nth-child(1) {
     font-size: 56px;
     font-weight: 900;
+    margin-bottom: 15px;
 }
 
-.main > :nth-child(2){
+.main> :nth-child(2) {
     font-size: 20px;
     font-weight: 500;
+    margin-bottom: 30px;
 }
 
-.main > :nth-child(3){
+.main> :nth-child(3) {
     font-size: 16px;
     font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.main> :nth-child(4) {
+    display: flex;
+}
+
+.email-wrap {
+    width: 59%;
+    height: 55px;
+    position: relative;
+    margin-right: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.381);
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: 0.5 linear;
+}
+
+.email {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 41, 41, 0.482);
+    border: none;
+    padding: 8px 0px 0px 16px;
+    box-sizing: border-box;
+}
+
+
+.email-wrap::after {
+    content: "Email address";
+    height: 30px;
+    width: 110px;
+    color: rgba(255, 255, 255, 0.603);
+    font-size: 17px;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+}
+
+.email-wrap:focus-within::after {
+    animation: after-element-in 0.1s linear forwards;
+}
+
+.email-wrap:not(:focus-within)::after {
+    animation: after-element-out 0.1s linear forwards;
+} 
+
+@keyframes after-element-in {
+    from {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+
+    to {
+        transform: translateX(-13px) translateY(-14px) scale(0.8);
+        color: rgba(255, 255, 255, 0.701);
+    }
+
+}
+
+@keyframes after-element-out {
+    from {
+        transform: translateX(-13px) translateY(-14px) scale(0.8);
+        color: rgba(255, 255, 255, 0.701);
+    }
+
+    to {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+}
+
+.getstarted {
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    width: 220px;
+    font-size: 26px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+@media (max-width:1280px) {
+    .heropic {
+        height: 843px;
+    }
+
+    .nav {
+        width: 90%;
+    }
+
+    .main {
+        width: 508px;
+        margin-bottom: 65px;
+    }
+
+    .main> :nth-child(1) {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .main> :nth-child(2) {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 24px;
+    }
+
+    .main> :nth-child(3) {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 16px;
+    }
+
+    .getstarted {
+        font-size: 20px;
+        width: 180px;
+    }
+}
+
+@media (max-width:960px) {
+    .logo {
+        width: 90px;
+    }
+
+    .nav {
+        width: 97%;
+    }
+
+    .main {
+        width: 432px;
+    }
+
+    .main> :nth-child(1) {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .main> :nth-child(2) {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 16px;
+    }
+
+    .main> :nth-child(3) {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 16px;
+    }
+
+    .getstarted {
+        font-size: 20px;
+        width: 210px;
+    }
+}
+
+@media (max-width:600px) {
+    .nav {
+        height: auto;
+        flex-wrap: wrap;
+        text-overflow: clip;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    .button> :nth-child(1) {
+        width: 55px;
+    }
+
+    .eng {
+        display: none;
+    }
+
+    .main {
+        width: 90vw;
+        margin: auto;
+        overflow-x: hidden;
+    }
+
+    .main> :nth-child(4) {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .email-wrap {
+        height: 45px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .email-wrap::after {
+        top: 10px;
+    }
+
+    .getstarted {
+        width: 160px;
+        height: 50px;
+    }
 }
